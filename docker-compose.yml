@@ -1,0 +1,11 @@
+services:
+
+  text-matcher:
+    build: .
+    container_name: text-matcher
+    ports:
+      - "8081:8081"
+    environment:
+      FILE_MATCHER_REFERENCE_FILE: /app/testingFiles/reference.txt
+      FILE_MATCHER_POOL_DIRECTORY: /app/testingFiles/pool
+      FILE_MATCHER_MAX_PARALLEL_FILES: 4

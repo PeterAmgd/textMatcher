@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: text-matcher
+
+server:
+  port: ${SERVER_PORT:8081}
+
+file-matcher:
+  reference-file: ./testingFiles/reference.txt
+  pool-directory: ./testingFiles/pool
+  max-parallel-files: 4
